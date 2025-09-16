@@ -32,4 +32,9 @@ class EditUser extends EditRecord
         // Uncomment to see after save data
         // dd('User berhasil diupdate:', $this->record->toArray());
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

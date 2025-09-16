@@ -37,3 +37,28 @@ File yang perlu diperhatikan:
 -   Model tetap menggunakan Eloquent seperti biasa
 
 Jadi Filament lebih ke "convention over configuration" - less coding, more productivity untuk admin panels.
+
+Filament generates semua UI otomatis:
+
+-   Table listing - dari UsersTable.php
+-   Create form - dari UserForm.php
+-   Edit form - dari UserForm.php
+-   Navigation - dari UserResource.php
+-   Actions - dari configuration
+
+Magic behind the scenes:
+
+Filament menggunakan Livewire + Alpine.js untuk generate reactive UI components dari PHP schema definitions.
+
+// Ini jadi table HTML lengkap otomatis:
+TextColumn::make('name')->searchable()->sortable()
+
+Keuntungan:
+
+-   Zero HTML/CSS coding
+-   Consistent UI/UX
+-   Responsive design built-in
+-   Dark mode support
+-   Accessibility compliant
+
+Filament = Admin panel tanpa frontend coding! ✨
